@@ -1,8 +1,14 @@
+import Phone from './containers/Phone'
+import EstiloGlobal, { Container } from './styles'
+
 function App() {
   return (
-    <div className="App">
-      <h1>Olá</h1>
-    </div>
+    <>
+      <EstiloGlobal />
+      <Container>
+        <Phone />
+      </Container>
+    </>
   )
 }
 
