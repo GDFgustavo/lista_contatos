@@ -1,5 +1,5 @@
 import { Botao } from './styles'
 
-const BotaoAdicionar = () => <Botao>+</Botao>
+const BotaoAdicionar = () => <Botao to="/adicionar">+</Botao>
 
 export default BotaoAdicionar

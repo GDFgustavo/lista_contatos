@@ -1,12 +1,14 @@
-import { Avatar, Card, Titulo } from './styles'
+import { A, Avatar, Card, Titulo } from './styles'
 
 const Contato = () => {
   return (
     <>
-      <Card>
-        <Avatar>G</Avatar>
-        <Titulo>Gustavo</Titulo>
-      </Card>
+      <A to="/editar">
+        <Card>
+          <Avatar>G</Avatar>
+          <Titulo>Gustavo</Titulo>
+        </Card>
+      </A>
     </>
   )
 }
