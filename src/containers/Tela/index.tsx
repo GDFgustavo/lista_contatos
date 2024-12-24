@@ -1,4 +1,4 @@
-import { TelaContainer } from '../../styles'
+import { BotaoVoltar, TelaContainer } from '../../styles'
 import ListaDeContato from '../ListaDeContatos'
 
 const Tela = () => {
@@ -8,6 +8,7 @@ const Tela = () => {
         <ListaDeContato />
         <ListaDeContato />
         <ListaDeContato />
+        <BotaoVoltar to="/" />
       </TelaContainer>
     </>
   )

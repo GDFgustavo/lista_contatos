@@ -1,4 +1,9 @@
-import { A, Avatar, Card, Titulo } from './styles'
+import { A, Avatar, Card, Nome } from './styles'
+
+export type Props = {
+  size?: string
+  fontSize?: number
+}
 
 const Contato = () => {
   return (
@@ -6,7 +11,7 @@ const Contato = () => {
       <A to="/editar">
         <Card>
           <Avatar>G</Avatar>
-          <Titulo>Gustavo</Titulo>
+          <Nome>Gustavo</Nome>
         </Card>
       </A>
     </>
