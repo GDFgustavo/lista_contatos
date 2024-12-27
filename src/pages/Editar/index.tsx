@@ -1,16 +1,11 @@
 import Editando from '../../containers/Editando'
-import { Notch } from '../../containers/Phone/styles'
-import { PhoneContainer } from '../../styles'
-import { TelaContainer } from '../../styles'
+import PhoneLayout from '../../containers/PhoneLayout'
 
 const Editar = () => (
   <>
-    <PhoneContainer>
-      <Notch />
-      <TelaContainer>
-        <Editando />
-      </TelaContainer>
-    </PhoneContainer>
+    <PhoneLayout>
+      <Editando />
+    </PhoneLayout>
   </>
 )
 

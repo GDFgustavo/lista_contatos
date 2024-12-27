@@ -1,13 +1,11 @@
-import { Notch } from '../../containers/Phone/styles'
-import { PhoneContainer } from '../../styles'
-import { TelaContainer } from '../../styles'
+import Adicionando from '../../containers/Adicionando'
+import PhoneLayout from '../../containers/PhoneLayout'
 
 const Adicionar = () => (
   <>
-    <PhoneContainer>
-      <Notch />
-      <TelaContainer>Pagina Adicionar</TelaContainer>
-    </PhoneContainer>
+    <PhoneLayout>
+      <Adicionando />
+    </PhoneLayout>
   </>
 )
 

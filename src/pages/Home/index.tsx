@@ -1,8 +1,11 @@
-import Phone from '../../containers/Phone'
+import ListaDeContato from '../../containers/ListaDeContatos'
+import PhoneLayout from '../../containers/PhoneLayout'
 
 const Home = () => (
   <>
-    <Phone></Phone>
+    <PhoneLayout showBarraSuperior={true}>
+      <ListaDeContato />
+    </PhoneLayout>
   </>
 )
 

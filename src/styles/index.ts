@@ -16,28 +16,6 @@ export const Container = styled.div`
   height: 100vh;
 `
 
-export const PhoneContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 300px;
-  padding: 0px 8px 16px;
-  height: 600px;
-  background: #fff;
-  border: 12px solid black;
-  border-radius: 40px;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-`
-
-export const TelaContainer = styled.div`
-  overflow-y: auto;
-  flex: 1;
-  box-sizing: border-box;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-`
-
 export const Titulo = styled.h1`
   font-size: 24px;
   font-weight: bold;
@@ -69,7 +47,11 @@ export const Botao = styled.button`
 `
 
 export const BotaoSalvar = styled(Botao)`
-  background-color: green;
+  // ...
+`
+
+export const BotaoRemoverCancelar = styled(Botao)`
+  margin-left: 52px;
 `
 
 export const BotaoVoltar = styled(Link)`
@@ -83,10 +65,6 @@ export const BotaoVoltar = styled(Link)`
   border: 1px solid #000;
   border-radius: 10px;
   background-color: #000;
-`
-
-export const BotaoRemoverCancelar = styled(Botao)`
-  // ...
 `
 
 export default EstiloGlobal
