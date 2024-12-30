@@ -1,9 +1,18 @@
+import { useSelector } from 'react-redux'
 import Contato from '../../components/Contato'
+import { RootReducer } from '../../store'
 
 const ListaDeContato = () => {
+  const contatos = useSelector((state: RootReducer) => state.contatos)
   return (
     <>
-      <Contato />
+      <ul>
+        {contatos.map((c) => (
+          <li key={c.nome}>
+            <Contato nome={c.nome} telefone={c.telefone} email={c.email} />
+          </li>
+        ))}
+      </ul>
     </>
   )
 }

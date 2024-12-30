@@ -5,13 +5,19 @@ export type Props = {
   fontSize?: number
 }
 
-const Contato = () => {
+export type ContactProps = {
+  nome: string
+  telefone?: number
+  email?: string
+}
+
+const Contato = ({ nome }: ContactProps) => {
   return (
     <>
       <A to="/editar">
         <Card>
-          <Avatar>G</Avatar>
-          <Nome>Gustavo</Nome>
+          <Avatar>{nome[0]}</Avatar>
+          <Nome>{nome}</Nome>
         </Card>
       </A>
     </>

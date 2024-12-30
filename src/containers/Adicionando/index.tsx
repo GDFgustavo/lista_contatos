@@ -1,13 +1,12 @@
-import { BotaoRemoverCancelar, BotaoSalvar } from '../../styles'
+import { BotaoSalvar } from '../../styles'
 import Cadastro from '../Cadastro'
-import { Title } from './styles'
+import { TituloAdd } from './styles'
 
 const Adicionando = () => (
   <>
-    <Title>Adicionar</Title>
+    <TituloAdd>Adicionar</TituloAdd>
     <Cadastro />
     <BotaoSalvar>Salvar</BotaoSalvar>
-    <BotaoRemoverCancelar>Cancelar</BotaoRemoverCancelar>
   </>
 )
 
