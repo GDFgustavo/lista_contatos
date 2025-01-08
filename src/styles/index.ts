@@ -21,6 +21,14 @@ export const Titulo = styled.h1`
   font-weight: bold;
 `
 
+export const FormContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: auto;
+  margin-bottom: 32px;
+`
+
 export const Input = styled.input`
   flex: 1;
   padding: 4px;
@@ -44,6 +52,11 @@ export const Botao = styled.button`
   border: solid 2px #000;
   border-radius: 10px;
   cursor: pointer;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 `
 
 export const BotaoSalvar = styled(Botao)`

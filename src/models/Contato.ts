@@ -1,6 +1,6 @@
 class ClassContact {
   nome: string
-  telefone: number
+  telefone: number | string
   email: string
   id: number
 

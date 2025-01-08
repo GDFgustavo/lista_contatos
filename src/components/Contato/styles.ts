@@ -33,6 +33,7 @@ export const Avatar = styled.div<Props>`
   align-items: center;
   font-size: ${(props) => (props.fontSize ? props.fontSize + 'px' : '16px')};
   font-weight: bold;
+  text-transform: uppercase;
   width: ${(props) => (props.size === 'large' ? '100px' : '24px')};
   height: ${(props) => (props.size === 'large' ? '100px' : '24px')};
   color: #000;
