@@ -71,7 +71,7 @@ const Editando = () => {
         <Avatar size="large" fontSize={32}>
           {nome[0]}
         </Avatar>
-        <Nome>{nome}</Nome>
+        <Nome>{nome ? nome : telefone}</Nome>
       </Card>
       <FormContainer>
         <InputFild
@@ -81,14 +81,16 @@ const Editando = () => {
           onChange={setNome}
           type="text"
           placeholder="Nome"
+          maxLength={15}
         />
         <InputFild
           disabled={estaEditando}
           src={PhoneIcon}
           value={telefone}
           onChange={setTelefone}
-          type="number"
+          type="tell"
           placeholder="Telefone"
+          maxLength={22}
         />
         <InputFild
           disabled={estaEditando}

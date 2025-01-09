@@ -10,28 +10,16 @@ const initialState: ContatosState = {
   itens: [
     {
       id: 1,
-      nome: 'Gustavo',
-      telefone: 999023414,
-      email: 'gustavo@1355.com'
-    },
-    {
-      id: 2,
-      nome: 'João',
-      telefone: 123456789,
-      email: 'joao@3256.com'
-    },
-    {
-      id: 3,
-      nome: 'Leo',
+      nome: 'gdfGustavo',
       telefone: 987654321,
-      email: 'leo@4310.com'
+      email: 'gdfgustavo24@gmail.com'
     }
   ],
   contatoSelecionado: {
     id: 1,
-    nome: 'Gustavo',
-    telefone: 999023414,
-    email: 'gustavo@1355.com'
+    nome: 'gdfGustavo',
+    telefone: 987654321,
+    email: 'gdfgustavo24@gmail.com'
   }
 }
 
@@ -58,9 +46,18 @@ const contatosSlice = createSlice({
       if (indexDoContato >= 0) {
         state.itens[indexDoContato] = action.payload
       }
+    },
+    cadastrar: (state, action: PayloadAction<Omit<ClassContact, 'id'>>) => {
+      const ultimoContato = state.itens[state.itens.length - 1]
+      const novoContato = {
+        ...action.payload,
+        id: ultimoContato ? ultimoContato.id + 1 : 1
+      }
+      state.itens.push(novoContato)
     }
   }
 })
 
-export const { remover, selecionarContato, editar } = contatosSlice.actions
+export const { remover, selecionarContato, editar, cadastrar } =
+  contatosSlice.actions
 export default contatosSlice.reducer

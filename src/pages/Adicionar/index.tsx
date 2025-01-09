@@ -1,10 +1,10 @@
-import Adicionando from '../../containers/Adicionando'
+import Cadastro from '../../containers/Cadastro'
 import PhoneLayout from '../../containers/PhoneLayout'
 
 const Adicionar = () => (
   <>
     <PhoneLayout>
-      <Adicionando />
+      <Cadastro />
     </PhoneLayout>
   </>
 )

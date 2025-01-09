@@ -3,13 +3,12 @@ import { Input, Icon } from '../../styles'
 
 type InputProps = {
   value?: string
-  telefone?: number
-  email?: string
   onChange: (value: string) => void
   disabled?: boolean
   src: string
-  type: string
+  type: string | 'tell'
   placeholder: string
+  maxLength?: number
 }
 
 const InputFild = ({
@@ -18,15 +17,26 @@ const InputFild = ({
   disabled = true,
   src,
   type,
-  placeholder
+  placeholder,
+  maxLength
 }: InputProps) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let novoValor = e.target.value
+
+    if (type === 'tell') {
+      novoValor = novoValor.replace(/\D/g, '')
+    }
+    onChange(novoValor)
+  }
+
   return (
     <InputContainer>
       <Icon src={src} />
       <Input
         disabled={!disabled}
         value={value}
-        onChange={(e) => onChange(e.target.value)}
+        onChange={handleChange}
+        maxLength={maxLength}
         type={type}
         placeholder={placeholder}
       />

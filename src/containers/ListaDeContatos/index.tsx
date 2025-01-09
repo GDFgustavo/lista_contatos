@@ -8,7 +8,7 @@ const ListaDeContato = () => {
     <>
       <ul>
         {itens.map((c) => (
-          <li key={c.nome}>
+          <li key={c.id}>
             <Contato
               nome={c.nome}
               telefone={c.telefone}
