@@ -34,7 +34,7 @@ const Adicionando = () => {
           email
         })
       )
-      navigate('/')
+      navigate('/contatos')
     }
   }
 
@@ -69,7 +69,7 @@ const Adicionando = () => {
       <BotaoSalvar type="submit" onClick={cadastrarContato}>
         Salvar
       </BotaoSalvar>
-      <BotaoRemoverCancelar onClick={() => navigate('/')}>
+      <BotaoRemoverCancelar onClick={() => navigate('/contatos')}>
         Cancelar
       </BotaoRemoverCancelar>
       <MensageError className={error ? 'visible' : 'hidden'}>

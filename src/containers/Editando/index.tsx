@@ -48,7 +48,7 @@ const Editando = () => {
 
   const removerContato = () => {
     dispatch(remover(id))
-    navigate('/')
+    navigate('/contatos')
   }
 
   const salvarEdicao = () => {
@@ -60,7 +60,7 @@ const Editando = () => {
         id
       })
     )
-    navigate('/')
+    navigate('/contatos')
   }
 
   const buttonDisabled = !nome && !telefone

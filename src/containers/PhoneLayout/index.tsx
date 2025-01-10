@@ -2,17 +2,19 @@ import { Notch, PhoneContainer, Tela } from './styles'
 import { BotaoVoltar } from '../../styles'
 import BarraSuperior from '../../components/BarraSuperior'
 
-type PhoneProps = {
+export type PhoneProps = {
   children: React.ReactNode
   showBarraSuperior?: boolean
+  wallpaper?: boolean
 }
 
 const PhoneLayout: React.FC<PhoneProps> = ({
   children,
-  showBarraSuperior = false
+  showBarraSuperior = false,
+  wallpaper = false
 }) => {
   return (
-    <PhoneContainer>
+    <PhoneContainer className={wallpaper ? 'com-imagem' : 'sem-imagem'}>
       <Notch />
       {showBarraSuperior && <BarraSuperior />}
       <Tela>{children}</Tela>

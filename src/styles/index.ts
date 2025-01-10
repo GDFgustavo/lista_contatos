@@ -72,12 +72,11 @@ export const BotaoVoltar = styled(Link)`
   left: 50%;
   bottom: 6px;
   transform: translateX(-50%);
-  height: 4px;
+  height: 3.5px;
   width: 100px;
   border: none;
-  border: 1px solid #000;
   border-radius: 10px;
-  background-color: #000;
+  background-color: #ccc;
 `
 
 export default EstiloGlobal

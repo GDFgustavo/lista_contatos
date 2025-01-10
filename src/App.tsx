@@ -7,10 +7,15 @@ import Adicionar from './pages/Adicionar'
 import Editar from './pages/Editar'
 
 import store from './store'
+import TelaInicial from './containers/TelaInicial'
 
 const rotas = createBrowserRouter([
   {
     path: '/',
+    element: <TelaInicial />
+  },
+  {
+    path: '/contatos',
     element: <Home />
   },
   {
