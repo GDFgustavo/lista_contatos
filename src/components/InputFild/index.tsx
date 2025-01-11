@@ -1,5 +1,5 @@
-import { InputContainer } from './styles'
-import { Input, Icon } from '../../styles'
+import { InputContainer, Input } from './styles'
+import { Icon } from '../../styles'
 
 type InputProps = {
   value?: string

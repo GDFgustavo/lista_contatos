@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 
 import styled from 'styled-components'
 import { Props } from '.'
+import variaveis from '../../styles/variaveis'
 
 export const A = styled(Link)`
   text-decoration: none;
@@ -10,21 +11,27 @@ export const A = styled(Link)`
 export const Card = styled.div`
   display: flex;
   align-items: center;
-  background-color: #ccc;
+  background-image: linear-gradient(
+    45deg,
+    ${variaveis.principal},
+    ${variaveis.cinza}
+  );
   border-radius: 10px;
   padding: 8px;
   margin-bottom: 8px;
-  transition: 0.2s ease;
+  transition: all 0.1s ease;
+  border: 2px solid ${variaveis.principal};
 
   &:hover {
-    background-color: #ddd;
+    border: 2px solid ${variaveis.cinza};
   }
 `
 
 export const Nome = styled.h3`
   font-size: 16px;
+  font-weight: 400;
   margin-left: 8px;
-  color: #000;
+  color: ${variaveis.textColor};
 `
 
 export const Avatar = styled.div<Props>`
@@ -36,7 +43,7 @@ export const Avatar = styled.div<Props>`
   text-transform: uppercase;
   width: ${(props) => (props.size === 'large' ? '100px' : '24px')};
   height: ${(props) => (props.size === 'large' ? '100px' : '24px')};
-  color: #000;
+  color: ${variaveis.textColor};
   border-radius: 50%;
-  border: 2px solid #000;
+  border: 2px solid ${variaveis.avatar};
 `

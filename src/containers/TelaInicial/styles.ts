@@ -6,8 +6,9 @@ export const AppIcon = styled.div`
   align-items: center;
   cursor: pointer;
   padding: 20px;
-  background-color: #ccc;
-  border-radius: 10px;
+  background-color: #e67e22;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 16px;
   width: 24px;
   height: 24px;
   margin-top: 16px;
@@ -15,5 +16,6 @@ export const AppIcon = styled.div`
 `
 export const P = styled.p`
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 400;
+  color: #fff;
 `

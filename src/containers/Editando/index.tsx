@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
-import { Avatar, Nome } from '../../components/Contato/styles'
-import { Card } from './styles'
+import { Avatar } from '../../components/Contato/styles'
+import { Card, NomeEdit } from './styles'
 import InputFild from '../../components/InputFild'
 import { Botao, BotaoRemoverCancelar, FormContainer } from '../../styles'
 import PhoneIcon from '../../assets/phone.svg'
@@ -71,7 +71,7 @@ const Editando = () => {
         <Avatar size="large" fontSize={32}>
           {nome[0]}
         </Avatar>
-        <Nome>{nome ? nome : telefone}</Nome>
+        <NomeEdit>{nome ? nome : telefone}</NomeEdit>
       </Card>
       <FormContainer>
         <InputFild
@@ -90,7 +90,7 @@ const Editando = () => {
           onChange={setTelefone}
           type="tell"
           placeholder="Telefone"
-          maxLength={22}
+          maxLength={20}
         />
         <InputFild
           disabled={estaEditando}

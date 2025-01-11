@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import styled, { createGlobalStyle } from 'styled-components'
+import variaveis from './variaveis'
 
 const EstiloGlobal = createGlobalStyle`
   * {
@@ -7,6 +8,11 @@ const EstiloGlobal = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5px;
+  }
+
+  body {
+  background-color: #f1f2f6;
   }
 `
 export const Container = styled.div`
@@ -18,7 +24,8 @@ export const Container = styled.div`
 
 export const Titulo = styled.h1`
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 400;
+  color: ${variaveis.textColor};
 `
 
 export const FormContainer = styled.form`
@@ -27,15 +34,6 @@ export const FormContainer = styled.form`
   gap: 8px;
   margin: auto;
   margin-bottom: 32px;
-`
-
-export const Input = styled.input`
-  flex: 1;
-  padding: 4px;
-  border: none;
-  outline: none;
-  font-weight: bold;
-  width: 200px;
 `
 
 export const Icon = styled.img`
@@ -48,8 +46,9 @@ export const Botao = styled.button`
   font-size: 14px;
   width: 40%;
   padding: 8px;
-  color: #000;
-  border: solid 2px #000;
+  color: ${variaveis.textColor};
+  background-color: ${variaveis.principal};
+  border: 2px solid #696969;
   border-radius: 10px;
   cursor: pointer;
 
@@ -57,10 +56,6 @@ export const Botao = styled.button`
     opacity: 0.6;
     cursor: not-allowed;
   }
-`
-
-export const BotaoSalvar = styled(Botao)`
-  // ...
 `
 
 export const BotaoRemoverCancelar = styled(Botao)`
@@ -76,7 +71,7 @@ export const BotaoVoltar = styled(Link)`
   width: 100px;
   border: none;
   border-radius: 10px;
-  background-color: #ccc;
+  background-color: rgba(206, 214, 224, 0.55);
 `
 
 export default EstiloGlobal

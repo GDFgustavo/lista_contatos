@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import fundo from '../../assets/wallpaper.jpg'
+import variaveis from '../../styles/variaveis'
 
 export const PhoneContainer = styled.div`
   display: flex;
@@ -8,7 +9,7 @@ export const PhoneContainer = styled.div`
   width: 300px;
   padding: 0px 8px 16px;
   height: 600px;
-  border: 12px solid black;
+  border: 10px solid black;
   border-radius: 40px;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -21,7 +22,7 @@ export const PhoneContainer = styled.div`
   }
 
   &.sem-imagem {
-    background: #fff;
+    background-color: ${variaveis.principal};
   }
 `
 

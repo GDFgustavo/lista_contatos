@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
-import { BotaoRemoverCancelar, BotaoSalvar, FormContainer } from '../../styles'
+import { Botao, BotaoRemoverCancelar, FormContainer } from '../../styles'
 import InputFild from '../../components/InputFild'
 import { MensageError, TituloAdd } from './styles'
 import PhoneIcon from '../../assets/phone.svg'
@@ -56,7 +56,7 @@ const Adicionando = () => {
           onChange={setTelefone}
           type="tell"
           placeholder="Telefone"
-          maxLength={22}
+          maxLength={20}
         />
         <InputFild
           src={EmailIcon}
@@ -66,9 +66,9 @@ const Adicionando = () => {
           placeholder="E-mail"
         />
       </FormContainer>
-      <BotaoSalvar type="submit" onClick={cadastrarContato}>
+      <Botao type="submit" onClick={cadastrarContato}>
         Salvar
-      </BotaoSalvar>
+      </Botao>
       <BotaoRemoverCancelar onClick={() => navigate('/contatos')}>
         Cancelar
       </BotaoRemoverCancelar>
