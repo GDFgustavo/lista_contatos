@@ -30,7 +30,7 @@ export const Card = styled.div`
 export const Nome = styled.h3`
   font-size: 16px;
   font-weight: 400;
-  margin-left: 8px;
+  text-align: center;
   color: ${variaveis.textColor};
 `
 
@@ -38,6 +38,8 @@ export const Avatar = styled.div<Props>`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 8px;
+  text-align: center;
   font-size: ${(props) => (props.fontSize ? props.fontSize + 'px' : '16px')};
   font-weight: bold;
   text-transform: uppercase;
